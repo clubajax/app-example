@@ -1,0 +1,3 @@
+[submodule "app/base"]
+	path = app/base
+	url = git@github.com:clubajax/base.git
