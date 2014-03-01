@@ -1,0 +1,104 @@
+﻿.ui-dt-host1 {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    z-index: 100000;
+    color: #3e3d3d;
+    border-color: #888888;
+    border:2px solid;
+    background-color: #000;
+    -moz-opacity:.80; 
+    filter:alpha(opacity=80); 
+    opacity:.80; 
+    /*box-shadow: 10px 10px 5px #888888;*/
+    font: normal 11px auto "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #4F6B72;
+}
+
+.ui-dt-table1 {	
+	padding: 0px;
+	margin: 0px;
+    color: #888888;    
+    border-color: gray;
+    border-width: 0px;
+    border-spacing: 0px;
+    padding:0px;
+    margin:0px;
+}
+
+.ui-dt-table1 td {	
+    padding:0px;
+    margin:0px;
+}
+
+.ui-dt-field1
+{
+    font: bold 12px "Trebuchet MS" , Verdana, Arial, Helvetica, sans-serif;
+    color: #4f6b72;
+    border-right: 1px solid #C1DAD7;
+    border-bottom: 1px solid #C1DAD7;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 3px 3px 3px 6px;
+    background: #CAE8EA url('bg_header.jpg') no-repeat;
+    border-collapse: separate;
+    border-color: gray;
+}
+
+
+.ui-dt-symbol1 {
+    border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	background: #fff;
+	padding: 3px 3px 3px 6px;
+	color: #4f6b72;
+}
+
+.ui-dt-crosshair {
+    color: yellow; 
+    padding-top:2px;
+    padding-bottom: 2px;
+    font: bold 20px Verdana, Arial, Helvetica, sans-serif;
+}
+
+.ui-dt-data1 {
+    font: bold 12px "Trebuchet MS" , Verdana, Arial, Helvetica, sans-serif;
+    border-right: 1px solid #C1DAD7;
+    border-bottom: 1px solid #C1DAD7;      
+	background: #fff;
+	padding: 3px 3px 3px 6px;
+	color: #4f6b72;
+    border-collapse: separate;    
+    border-color: gray; 
+}
+
+/* test */
+
+.ui-dt-time {
+    color: white   
+}
+
+
+.ui-dt-value-bull 
+{
+    text-align: right;
+    color: blue;
+}
+
+.ui-dt-value-bear 
+{
+    text-align: right;
+    color: #148C60;
+}
+
+.ui-dt-value-neutral 
+{
+    text-align: right;
+    color: yellow;
+}
+
+/* test */

@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Test Real Time</title>
+    <link href='./assets/css/tests.css' rel='stylesheet' />
+    <style>
+        #chart{
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+    <div id="chart"></div>
+    </div>
+        <button id='lt'>Light</button>
+        <button id='dk'>Dark</button>
+    </div>
+    <div>
+        <button id='ohlc'>OHLC</button>
+        <button id='area'>Area</button>
+        <button id='line'>Line</button>
+        <button id='cs'>Sticks</button>
+    </div>
+    <div>
+        <button id='symYhoo'>Symbol: YHOO, Int: 5 min</button>
+        <button id='symGoog'>Symbol: GOOG</button>
+        <button id='intDaily'>Int: Daily</button>
+    </div>
+    <div>
+        <button id='rt'>Real Time</button>
+        <button id='stp'>Stop</button>
+        <button id='cng'>Change Bar</button>
+    </div>
+    <div>
+        <button id='ai'>Add Indicator</button>
+        <button id='ri'>Rem Indicator</button>
+    </div>
+    <div>
+        <button id='ag'>Add Graph</button>
+        <button id='rg'>Rem Graph</button>
+        <button id='cg'>Clear Graphs</button>
+    </div>
+
+
+    <div class='testCases'>
+        <h3>Tests</h3>
+        <ul>
+            <li>Click <i>Change Bar</i> after real time or scroll has pushed it off screen</li>
+        </ul>
+    </div>
+    <script>
+
+        function setEvent(id, cb){
+            document.getElementById(id).addEventListener('click', cb, false);
+        }
+
+        setEvent('rt', function(){
+            window.runRealtime();
+        });
+        setEvent('stp', function(){
+            window.stopRealtime();
+        });
+
+
+        setEvent('lt', function(){
+            window.chart.setTheme('light');
+        });
+        setEvent('dk', function(){
+            window.chart.setTheme('dark');
+        });
+
+        setEvent('ohlc', function(){
+            window.chart.chartType('ohlc');
+        });
+        setEvent('line', function(){
+            window.chart.chartType('line');
+        });
+        setEvent('area', function(){
+            window.chart.chartType('area');
+        });
+        setEvent('cs', function(){
+            window.chart.chartType('candlestick');
+        });
+        setEvent('symYhoo', function(){
+            window.chart.setWatermark({
+                symbol:'YHOO',
+                interval:'5 min'
+            });
+        });
+        setEvent('symGoog', function(){
+            window.chart.setWatermark({
+                symbol:'GOOG'
+            });
+        });
+        setEvent('intDaily', function(){
+            window.chart.setWatermark({
+                interval:'Daily'
+            });
+        });
+        setEvent('cng', function(){
+            window.changeBar();
+        });
+        setEvent('ai', function(){
+            window.addIndicator();
+        });
+        setEvent('ri', function(){
+            window.removeIndicator();
+        });
+        setEvent('ag', function(){
+            window.addGraph();
+        });
+        setEvent('rg', function(){
+            window.removeGraph();
+        });
+        setEvent('cg', function(){
+            window.clearGraphs();
+        });
+    </script>
+    <script data-main="testRealTime.main" src="../src/lib/require.js"></script>
+
+</body>
+</html>

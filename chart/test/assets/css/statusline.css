@@ -1,0 +1,65 @@
+﻿.ui-sl-body {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    height: 20px;
+}
+
+.ui-sl-scrollRight {
+    background-image: url('../images/statuslineRight.png');
+}
+
+.ui-sl-scrollLeft {
+    background-image: url('../images/statuslineLeft.png');
+}
+
+.ui-sl-scrollerBody {
+    opacity: 1;
+}
+
+.ui-sl-scroller {
+    width: 36px;
+    height: 20px;
+}
+
+.ui-sl-scrollRight, .ui-sl-scrollLeft {
+    width: 16px;
+    height: 20px;
+    cursor: pointer !important;
+}
+
+/* test */
+
+.ui-sl-labelValueGroup {
+    padding-right: 10px
+}
+
+
+.ui-sl-label {
+    padding-right: 4px;
+    color: #475054;
+}
+
+.ui-sl-label2 {
+    padding-right: 4px;
+    border: 1px #000 solid;
+}
+
+.ui-sl-value-bull {
+    color: #0F0;
+}
+
+.ui-sl-value-bear {
+    color: #F00;
+}
+
+.ui-sl-value-neutral 
+{
+    color: #FFF;
+}
+
+.us-sl-prefix {
+    color: #FFF;
+}
+
+/* test */

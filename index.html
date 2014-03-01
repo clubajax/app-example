@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<title>App Example</title>
-	<link href='./base/tests/tests.css' rel='stylesheet' />
+	<link href='./app/base/tests/tests.css' rel='stylesheet' />
 	<script>
 		window.dojoConfig = {
 			noCatch:false,
@@ -10,9 +10,9 @@
 			tlmSiblingOfDojo: true,
 			baseUrl: '',
 			packages: [
-				{name: 'base', location: './'},
-				{name: 'core', location: './base/core'},
-				{name: 'dcl', location: './base/dcl'}
+				{name: 'base', location: './app/base'},
+				{name: 'core', location: './app/base/core'},
+				{name: 'ui', location: './app/ui'}
 			]
 		};
 		
@@ -22,39 +22,33 @@
 </head>
 <body>
 	<h1>App Example</h1>
-	<div id='widget01' data-widget='ParentWidget'>
-		<div data-widget='ChildWidget'>
-			<div data-widget='GrandChildWidget' data-props='displayText:Grand Child Widget!'></div>	
+	<div id='widget01' ></div>
+	<div id='widget02'></div>
+	
+	<div id='widget03'>
+		<div class="child">
+			<div class="sibling"><div>sib</div></div>
+			<div class="sibling"></div>
 		</div>
 	</div>
-	<div id='widget02'></div>
-	<div id='widget03'></div>
+
+<div id='widget03'><div class="child"><div class="sibling"><div>sib</div></div><div class="sibling"></div></div></div>
+
+<div id='widget03'><div class="child"></div></div>
+
+<div id='widget03'>
+<div class="child">
+<div class="sibling">
+<div>sib
+<div class="sibling">
+	
 	<script>
 		require([
-			'core/dcl',
-			'core/Widget',
-			'core/parser'
-		], function(dcl, Widget, parser) {
+			'ui/Video',
+			'core/parser/main'
+		], function(Video, parser) {
 			
-			dcl(Widget, {
-				declaredClass:'GrandChildWidget',
-				displayText:'Defult Display Text',
-				template:'<div class="GrandChildWidget"><h3>{{displayText}}</h3></div>'
-			});
-			
-			dcl(Widget, {
-				declaredClass:'ChildWidget',
-				template:'<div class="ChildWidget">' +
-								'<h3>Child Widget</h3>' +
-							'</div>'
-			});
-			
-			dcl(Widget, {
-				declaredClass:'ParentWidget',
-				template:	'<div class="ParentWidget">' +
-								'<h3>Parent Widget</h3>' +
-							'</div>'
-			});
+			new Video({}, 'widget01');
 			
 			parser.parse();
 			

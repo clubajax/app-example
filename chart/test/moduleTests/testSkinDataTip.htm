@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script data-main="testSkinDataTip.main" src="../../../../../lib/require.js"></script>
+    <link href="../assets/css/datatip1.css" rel="stylesheet" />
+    <script type="text/javascript">
+        function DockedInside() {
+            window.idataTip.settings.parent = $('#inside');
+        }
+
+        function DockedOutside() {
+            window.idataTip.settings.parent = $('#outside');
+        }
+
+        function None() {
+            window.idataTip.settings.parent = null;
+        }
+        
+        function showAlways(value) {
+            window.idataTip.settings.alwaysEnabled = value;           
+        }
+    </script>
+</head>
+<body>
+    <div id="outside" style='position: absolute; top: 100px; left: 10px; background-color: black;'>
+    </div>
+    <div id="inside" style='position: absolute; top: 50px; left: 300px; background-color: black; z-index: 100000;'>
+    </div>
+    <div id="parent" style='width: 1400px; height: 800px; position: absolute; top: 15px; left: 210px;'>
+    </div>
+    <a href="http://localhost:8987/src/chart/test/testDrawingObjects.htm">Drawing Objects</a><br>
+    <input type="radio" name="group1" value="none" checked="checked" onclick="None()">
+    None<br>
+    <input type="radio" name="group1" value="Docked in Chart" onclick="DockedInside()">
+    Docked Inside<br>
+    <input type="radio" name="group1" value="Docked Outside Chart" onclick="DockedOutside()">
+    Docked Outside<br>
+    <label><input type="checkbox" onchange="showAlways(this.checked)" />Show Always</label>
+    <hr width="100px" />
+
+</body>
+</html>

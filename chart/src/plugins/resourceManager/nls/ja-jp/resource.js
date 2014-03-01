@@ -1,0 +1,25 @@
+//this is mock data, it have been generated for testing purposes
+define({
+        "lblOpen_key": "始値",
+        "lblHigh_key": "高値",
+        "lblLow_key": "安値",
+        "lblClose_key": "終値",
+        "lblVolume_key": "出来高",
+        "lblUpVol_key": "アップボリューム",
+        "lblDownVol_key": "ダウンボリューム",
+        "lblOpen_Interest_key": "取組高",
+        "lblOpen_short_key": "始",
+        "lblHigh_short_key": "高",
+        "lblLow_short_key": "安",
+        "lblLast_short_key": "現",
+        "lblBid_short_key": "買",
+        "lblAsk_short_key": "売",
+        "lblVolume_short_key": "出来",
+        "lblDailyOpenInterest_short_key": "取組高",
+        "lblMonths_short_key": ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+        "lblMonths_key": ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+        "lblDays_short_key": ['日', '月', '火', '水', '木', '金', '土'],
+        "lblDays_key": ['日曜日', '月曜日', '火曜日', '水曜日', '木曜日', '金曜日', '土曜日'],
+        "lblLoading_key": "ローディング中",
+        "lblError_key": "チャート作成に失敗しました。"
+});
